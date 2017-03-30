@@ -1,0 +1,17 @@
+%header#header
+  = render partial: 'spina/admin/shared/breadcrumbs'
+
+= render 'form'
+
+.well
+  .table-container
+    %table.table
+      %thead
+        %tr
+          %th Element Label
+          %th Element Type
+          %th Required Field?
+          
+      %tbody#contact_form_elements
+        - @contact_form_elements.each do |element|
+          = render 'spina/admin/contact_form_elements/contact_form_element', element: element
