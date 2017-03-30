@@ -8,7 +8,7 @@
 = render 'form'
 
 .well
-  .dd#form_element_list{data: {:"sort-url" => spina.sort_admin_contact_form_elements_url }}
+  .dd#form_elements_list{data: {:"sort-url" => spina.sort_admin_contact_form_elements_url }}
     %ol.dd-list
       - @contact_form_elements.each do |element|
         %li.dd-item{data: {id: element.id}}
