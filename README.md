@@ -1,5 +1,5 @@
 # SpinaContactForms
-This will add a contact form builder for spina. You can create form elements in the backend, this will populate the from in the frontend.
+This will add a contact form builder for spina. You can create form elements in the backend that will populate the form in the frontend.
 
 ## Installation
 Add this line to your application's Gemfile:
