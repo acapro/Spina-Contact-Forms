@@ -25,6 +25,9 @@ Add the following to `config/secrets.yml`
 contact_form_from_email: contact_form@yourdomain.com
 ```
 
+The email will be sent to whatever current_account.email returns, so make sure an email address is saved in the database under account settings.
+
+
 Add the following to your theme's config file (config/initializers/themes/theme_name.rb)
 ```ruby
 theme.plugins = ['ContactForm']
