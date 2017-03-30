@@ -25,6 +25,12 @@ Add the following to your theme's config file (config/initializers/themes/theme_
 theme.plugins = ['ContactForm']
 ```
 
+Copy and run the migrations
+```bash
+rake spina_contact_forms_engine:install:migrations
+rake db:migrate
+```
+
 ## Usage
 In your view, call `<%= spina_contact_form%>`
 That's it! Use Mailcatcher for local development, and test it out.
@@ -35,6 +41,7 @@ Contributions are welcome! It is still in an early stage, and more features are 
 ## Roadmap
 * Currently only text inputs and text areas are supported, select dropdowns, check boxes and radio buttons still needed
 * Internationalization needed
+* Create an install generator, which copies the migrations and view files
 
 ## License
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
