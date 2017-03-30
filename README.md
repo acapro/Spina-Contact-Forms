@@ -4,8 +4,13 @@ This will add a contact form builder for spina. You can create form elements in 
 ## Installation
 Add this line to your application's Gemfile:
 
+For latest master branch
 ```ruby
 gem 'spina_contact_forms', git: 'https://github.com/acapro/Spina-Contact-Forms'
+```
+or
+```ruby
+gem 'spina_contact_forms'
 ```
 
 And then execute:
