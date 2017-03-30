@@ -22,8 +22,10 @@ module Spina
       end
 
       def sort
-        puts params[:list]
-        render nothing: true
+        params[:list].each_pair do |parent_pos, parent_node|
+          ContactFormElement.find(parent_node[:id]).update(position: parent_pos)
+        end
+        head :ok
       end
 
       def update
