@@ -1,4 +1,3 @@
-%tr
-  %td= element.label
-  %td= element.input_type
-  %td= element.required?
+%li.dd-item{data: {id: element.id}}
+  %div.dd-item-inner
+    = link_to element.label, '#', class: 'button button-link button-small sortable-link'
