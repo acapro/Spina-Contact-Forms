@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Adam Cooper"]
   s.email       = ["mail@adamcooper.de"]
   s.homepage    = "http://www.github.com/acapro"
-  s.summary     = "Plugin to create a contact form in spina"
-  s.description = "Description of SpinaContactForms."
+  s.summary     = "Spina contact form plugin"
+  s.description = "Adds a contact form to Spina"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]

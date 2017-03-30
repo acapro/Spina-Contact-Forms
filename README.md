@@ -1,8 +1,5 @@
 # SpinaContactForms
-Short description and motivation.
-
-## Usage
-How to use my plugin.
+This will add a contact form for
 
 ## Installation
 Add this line to your application's Gemfile:
@@ -16,13 +13,22 @@ And then execute:
 $ bundle
 ```
 
-Or install it yourself as:
-```bash
-$ gem install spina_contact_forms
+Make sure your mail settings are setup correctly.
+Add the following to `config/secrets.yml`
+```
+contact_form_from_email: contact_form@yourdomain.com
 ```
 
+Add the following to your theme's config file (config/initializers/themes/theme_name.rb)
+```ruby
+theme.plugins = ['ContactForm']
+```
+
+## Usage
+In your view, call `<%= spina_contact_form%>`
+
 ## Contributing
-Contribution directions go here.
+Contributions are welcome! It is still in an early stage, and more features are required. Fork it, and create a pull request.
 
 ## License
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
