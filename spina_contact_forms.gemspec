@@ -9,15 +9,15 @@ Gem::Specification.new do |s|
   s.version     = SpinaContactForms::VERSION
   s.authors     = ["Adam Cooper"]
   s.email       = ["mail@adamcooper.de"]
-  s.homepage    = "http://www.github.com/acapro"
-  s.summary     = "Spina contact form plugin"
-  s.description = "Adds a contact form to Spina"
+  s.homepage    = "https://github.com/acapro/Spina-Contact-Forms"
+  s.summary     = "Contact form builder plugin for Spina"
+  s.description = "Contact form builder plugin for Spina"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  s.add_dependency "rails", "~> 5.0.2"
-  s.add_dependency "spina"
+  s.add_dependency "rails", "~> 5.0"
+  s.add_dependency "spina", "~> 0.10"
 
   s.add_development_dependency "sqlite3"
 end
