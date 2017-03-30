@@ -8,6 +8,9 @@ module Spina
 
       def create
         @contact_form_element = ContactFormElement.new(contact_form_element_params)
+        @contact_form_element.theme = current_theme.name
+        @contact_form_element.position = Time.now.to_i
+
         respond_to do |format|
           if @contact_form_element.save
             format.html {redirect_to admin_contact_forms_path, notice: 'Form Element was successfully created.'}
@@ -16,6 +19,11 @@ module Spina
             render :error
           end
         end
+      end
+
+      def sort
+        puts params[:list]
+        render nothing: true
       end
 
       def update

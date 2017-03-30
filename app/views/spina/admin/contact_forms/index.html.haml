@@ -1,17 +1,30 @@
 %header#header
   = render partial: 'spina/admin/shared/breadcrumbs'
+  #header_actions
+    = link_to '#form_elements_list', class: 'button sort-switch', data: {change_order: t('spina.pages.change_order'), done_changing_order: t('spina.pages.done_changing_order')} do
+      = icon('random')
+      = t('spina.pages.change_order')
 
 = render 'form'
 
 .well
-  .table-container
-    %table.table
-      %thead
-        %tr
-          %th Element Label
-          %th Element Type
-          %th Required Field?
-          
-      %tbody#contact_form_elements
-        - @contact_form_elements.each do |element|
-          = render 'spina/admin/contact_form_elements/contact_form_element', element: element
+  .dd#form_element_list{data: {:"sort-url" => spina.sort_admin_contact_form_elements_url }}
+    %ol.dd-list
+      - @contact_form_elements.each do |element|
+        %li.dd-item{data: {id: element.id}}
+          %div.dd-item-inner
+            = link_to element.label, '#', class: 'button button-link button-small sortable-link'
+
+
+-# .well
+-#   .table-container
+-#     %table.table
+-#       %thead
+-#         %tr
+-#           %th Element Label
+-#           %th Element Type
+-#           %th Required Field?
+-#
+-#       %tbody#contact_form_elements
+-#         - @contact_form_elements.each do |element|
+-#           = render 'spina/admin/contact_form_elements/contact_form_element', element: element
