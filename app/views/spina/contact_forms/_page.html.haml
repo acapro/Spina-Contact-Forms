@@ -1,6 +1,6 @@
 - @contact_form_elements = Spina::ContactFormElement.by_theme(current_theme)
 = form_tag contact_forms_path, remote: true, id: 'spina_contact_form' do
-  - contact_form_elements.each do |element|
+  - @contact_form_elements.each do |element|
     %label
       - if element.required?
         *
