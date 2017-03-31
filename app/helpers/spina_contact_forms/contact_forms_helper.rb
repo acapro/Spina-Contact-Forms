@@ -1,8 +1,7 @@
 module SpinaContactForms
   module ContactFormsHelper
     def spina_contact_form
-      @contact_form_elements = Spina::ContactFormElement.all
-      render :partial => 'spina/contact_forms/page', locals: {contact_form_elements: @contact_form_elements.sorted }
+      render :partial => 'spina/contact_forms/page'
     end
 
     def spina_contact_form_input(name, type)

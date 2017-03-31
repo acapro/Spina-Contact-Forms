@@ -7,7 +7,7 @@ module Spina
 
       def index
         @contact_form_element = ContactFormElement.new
-        @contact_form_elements = ContactFormElement.all
+        @contact_form_elements = ContactFormElement.by_theme(current_theme)
       end
 
       private
