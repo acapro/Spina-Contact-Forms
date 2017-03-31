@@ -45,6 +45,8 @@ rake db:migrate
 In your view, call `<%= spina_contact_form%>`
 That's it! Use Mailcatcher for local development, and test it out.
 
+Contact Forms are scoped to the current_theme, so any changes to the theme name or setting a different theme for the account will cause a separate contact form to be loaded.
+
 ## Contributing
 Contributions are welcome! It is still in an early stage, and more features are required. Fork it, and create a pull request.
 
