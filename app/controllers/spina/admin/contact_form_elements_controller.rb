@@ -2,7 +2,7 @@ module Spina
   module Admin
     class ContactFormElementsController < AdminController
       layout 'spina/admin/admin'
-      before_action :set_element, only: [:destroy]
+      before_action :set_element, only: [:edit, :update, :destroy]
 
       def error
       end
@@ -30,6 +30,11 @@ module Spina
       end
 
       def update
+        if @contact_form_element.update_attributes(contact_form_element_params)
+          redirect_to admin_contact_forms_path, notice: 'Form element updated.'
+        else
+          render :error
+        end
       end
 
       def destroy

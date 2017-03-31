@@ -1,6 +1,6 @@
 %li.dd-item{data: {id: element.id}}
   %div.dd-item-inner
-    = link_to element.label, '#', class: 'button button-link button-small sortable-link'
+    = link_to element.label, edit_admin_contact_form_element_path(element), remote: true, class: 'button button-link button-small sortable-link'
     %span.pull-right
       = link_to spina.admin_contact_form_element_path(element), method: :delete, data: {confirm: t('spina.delete_confirmation', subject: element.label)}, class: 'button button-small button-link button-danger dd-nodrag' do
         = icon('cross')

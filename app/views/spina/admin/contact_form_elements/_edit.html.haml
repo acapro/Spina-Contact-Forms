@@ -1,0 +1,24 @@
+.modal
+  = form_for [spina, :admin, @contact_form_element], url: spina.admin_contact_form_element_path do |f|
+    %header
+      = link_to '#', data: {dismiss: 'modal'} do
+        = icon('cross')
+
+      %h3
+        Contact Form Element
+
+    %section
+      .form-label Form Label
+      .form-control= f.text_field :label, placeholder: 'Form Label'
+      .form-label Required?
+      .form-control= f.check_box :required, data: {switch: 'true'}
+      .form-label Form Type
+      .form-control
+        .select-dropdown
+          = f.collection_select :input_type, Spina::ContactFormElement.input_types.map{ |el| [el.first, el.first.humanize] }, :first, :second
+
+    %footer
+      = link_to t('spina.cancel'), '#', data: {dismiss: 'modal'}
+      %button.primary{type: 'submit'}
+        = icon('check')
+        =t 'spina.save'
