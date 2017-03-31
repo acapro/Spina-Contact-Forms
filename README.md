@@ -1,6 +1,8 @@
 # SpinaContactForms
 This will add a contact form builder in spina. You can create form elements in the backend that will populate the form in the frontend.
 
+This is a work in progress.
+
 Please update to the latest version, anything under '0.1.2' will NOT work.
 
 ## Installation
@@ -52,8 +54,13 @@ Contributions are welcome! It is still in an early stage, and more features are 
 
 ## Roadmap
 * Currently only text inputs and text areas are supported, select dropdowns, check boxes and radio buttons still needed
+* Required elements do not yet work
+* Use Form Object design pattern (for Active Model validations)
 * Internationalization needed
 * Create an install generator, which copies the migrations and view files
+
+Further updates will be available in may.
+
 
 ## License
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
