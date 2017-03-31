@@ -13,7 +13,7 @@ module Spina
       private
 
       def set_breadcrumb
-        add_breadcrumb t('plugins.ContactForm'), admin_contact_forms_path
+        add_breadcrumb t('contact_form.menu_title'), admin_contact_forms_path
       end
     end
   end
