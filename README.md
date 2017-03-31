@@ -35,7 +35,7 @@ Add the following to your theme's config file (config/initializers/themes/theme_
 theme.plugins = ['ContactForm']
 ```
 
-Copy and run the migrations
+Copy and run the migrations, make sure to do this when upgrading as well, since new migragtions could be added.
 ```bash
 rake spina_contact_forms_engine:install:migrations
 rake db:migrate
