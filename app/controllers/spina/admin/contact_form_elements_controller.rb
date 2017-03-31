@@ -2,6 +2,7 @@ module Spina
   module Admin
     class ContactFormElementsController < AdminController
       layout 'spina/admin/admin'
+      before_action :set_element, only: [:destroy]
 
       def error
       end
@@ -32,12 +33,18 @@ module Spina
       end
 
       def destroy
+        @contact_form_element.destroy
+        redirect_to admin_contact_forms_path, notice: 'Form element deleted.'
       end
 
       private
 
       def contact_form_element_params
         params.require(:contact_form_element).permit(:label, :required, :input_type)
+      end
+
+      def set_element
+        @contact_form_element = ContactFormElement.find(params[:id])
       end
 
     end
